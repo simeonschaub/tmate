@@ -21,10 +21,13 @@ jobs:
         with:
           repository: JuliaDebug/JuliaInterpreter.jl
           ref: master
-      - uses: julia-actions/setup-julia@v2
+      - uses: julia-actions/install-juliaup@v2
         with:
-          version: ${{ matrix.version }}
-          arch: ${{ matrix.arch }}
+          channel: 'nightly~x86'
+      #- uses: julia-actions/setup-julia@v2
+      #  with:
+      #    version: ${{ matrix.version }}
+      #    arch: ${{ matrix.arch }}
       - name: Setup tmate session
         uses: mxschmitt/action-tmate@v3
         env:
