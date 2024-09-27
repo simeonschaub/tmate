@@ -7,10 +7,8 @@ jobs:
     strategy:
       matrix:
         version:
-     #     - '1.1'
-     #     - '1.5'
-          #- 'nightly'
-          - '1'
+          - 'nightly'
+          #- '1'
         os:
      #     - ubuntu-latest
      #     - macOS-latest
@@ -18,11 +16,11 @@ jobs:
         arch:
           - x64
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          repository: simeonschaub/ImageMagick.jl
-          ref: sds/dpi
-      - uses: julia-actions/setup-julia@v1
+          repository: JuliaDebug/JuliaInterpreter.jl
+          ref: master
+      - uses: julia-actions/setup-julia@v2
         with:
           version: ${{ matrix.version }}
           arch: ${{ matrix.arch }}
