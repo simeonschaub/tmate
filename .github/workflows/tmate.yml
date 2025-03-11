@@ -24,6 +24,7 @@ jobs:
       - uses: julia-actions/install-juliaup@v2
         with:
           channel: 'nightly~x86'
+      - run: echo {{ 'a b c' }}
       #- uses: julia-actions/setup-julia@v2
       #  with:
       #    version: ${{ matrix.version }}
