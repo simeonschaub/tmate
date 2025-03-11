@@ -17,6 +17,7 @@ jobs:
           - x86
           #- x64
     steps:
+      - run: echo ${{ 'a b c' }}
       - uses: actions/checkout@v4
         with:
           repository: JuliaDebug/JuliaInterpreter.jl
@@ -24,7 +25,6 @@ jobs:
       - uses: julia-actions/install-juliaup@v2
         with:
           channel: 'nightly~x86'
-      - run: echo {{ 'a b c' }}
       #- uses: julia-actions/setup-julia@v2
       #  with:
       #    version: ${{ matrix.version }}
