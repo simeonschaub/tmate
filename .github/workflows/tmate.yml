@@ -7,8 +7,8 @@ jobs:
     strategy:
       matrix:
         version:
-          - 'nightly'
-          #- '1'
+          #- 'nightly'
+          - '1'
         os:
      #     - ubuntu-latest
      #     - macOS-latest
